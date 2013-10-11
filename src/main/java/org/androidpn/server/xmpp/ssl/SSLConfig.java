@@ -30,9 +30,6 @@ import javax.net.ssl.TrustManagerFactory;
 import org.androidpn.server.util.Config;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import com.sun.org.apache.bcel.internal.util.ClassPath;
-
 /** 
  * Configuration class for SSL settings.
  *
