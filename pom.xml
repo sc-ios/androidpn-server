@@ -305,7 +305,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>wq</finalName>
+		<finalName>pn</finalName>
 		<plugins>
 			<!-- eclipse插件 -->
 			<plugin>
@@ -340,7 +340,7 @@
 				<configuration>
 					<scanIntervalSeconds>1</scanIntervalSeconds>
 					<webAppConfig>
-						<contextPath>/bfw</contextPath>
+						<contextPath>/pn</contextPath>
 						<defaultsDescriptor>src/main/resources/config/jetty/webdefault.xml</defaultsDescriptor>
 					</webAppConfig>
 				</configuration>
