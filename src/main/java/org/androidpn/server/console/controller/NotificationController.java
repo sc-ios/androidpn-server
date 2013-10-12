@@ -46,7 +46,13 @@ public class NotificationController extends MultiActionController {
         mav.setViewName("notification/form");
         return mav;
     }
-
+    /**
+     * 完成短信推送操作
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
     public ModelAndView send(HttpServletRequest request,
             HttpServletResponse response) throws Exception {
         String broadcast = ServletRequestUtils.getStringParameter(request,
@@ -62,8 +68,10 @@ public class NotificationController extends MultiActionController {
         logger.debug("apiKey=" + apiKey);
 
         if (broadcast.equalsIgnoreCase("Y")) {
+        	//群发
             notificationManager.sendBroadcast(apiKey, title, message, uri);
         } else {
+        	//单独发送
             notificationManager.sendNotifcationToUser(apiKey, username, title,
                     message, uri);
         }
